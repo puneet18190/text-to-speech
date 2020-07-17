@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text To Speech</title>
+</head>
+<body>
+  <h1>Text to Speech</h1>
+  <textarea id="text" placeholder="Enter your text"></textarea>
+  <button onclick="play()">Play</button>
+
+  <script type="text/javascript">
+    function play(){
+      var text = document.getElementById('text').value
+      var msg = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
+</body>
+</html>
